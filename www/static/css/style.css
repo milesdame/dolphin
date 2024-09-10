@@ -1,0 +1,22 @@
+/*
+Color HEX Codes
+Raise Black: 332E3C
+Celadon: ABC4A1
+Persian Orange: E0986B
+Light Blue: 9FC9D1
+Light Orange: FFDBB1
+*/
+
+.jost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.vidaloka-regular {
+    font-family: "Vidaloka", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
