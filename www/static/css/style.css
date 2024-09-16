@@ -7,16 +7,65 @@ Light Blue: 9FC9D1
 Light Orange: FFDBB1
 */
 
-.jost {
+p, ul, li, a {
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  color: #332E3C;
 }
 
-.vidaloka-regular {
+h1, h2, h3, h4, h5 {
     font-family: "Vidaloka", serif;
     font-weight: 400;
     font-style: normal;
+    color: #332E3C;
   }
-  
+
+h1 {
+  display: inline;
+  font-size: 48px;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #FFDBB1;
+    color: #332E3C;
+  }
+
+ul {
+  list-style-type:none;
+}
+
+#nav-bar {
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color:#FFDBB1;
+}
+
+#nav-button {
+  margin: 5px;
+}
+
+div {
+  margin: 5px;
+}
+
+#nav-bar li {
+  margin: 10px;
+}
+
+#creators {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#creators .row {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: center;
+}
