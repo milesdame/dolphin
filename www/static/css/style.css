@@ -18,7 +18,7 @@ p, ul, li, a {
 h1, h2, h3, h4, h5 {
     font-family: "Vidaloka", serif;
     font-weight: 400;
-    font-style: normal;
+    font-style: bold;
     color: #332E3C;
   }
 
@@ -50,10 +50,7 @@ ul {
 
 @media (min-width: 700px) {
     #nav-bar {
-        display:flex;
         justify-content: flex-end;
-        align-items: center;
-        background-color:#FFDBB1;
       }
   }
 
@@ -78,18 +75,17 @@ div {
 
 @media (min-width: 700px) {
     #creators {
-        display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
       }
   }
   
-
-
 #creators .row {
   display: flex;
   flex-direction:row;
   justify-content: space-around;
   align-items: center;
+}
+
+.bio {
+  flex: 1 1 0px;
 }
