@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        Flipper Finder
+        flipper finder
     </title>
 
     <!-- Fonts from Google -->
@@ -24,21 +24,16 @@
 <body onload="changeMode()">
 
     <header>
-        <a href="#"><img id="logo" src="images\placeholder-logo.png"></a>
-        <h1>Flipper Finder</h1>
-        <!-- Rounded switch - W3 Schools Toggle-->
-        <label class="switch">
-            <input type="checkbox" onchange="changeMode()">
-            <span class="slider round"></span>
-        </label>
+        <a href="#"><img id="logo" src="images\dolphinLogo.png"></a>
+        <h1>flipper finder</h1>
         <nav>
-            <ul id="nav-bar">
-                <li><a class="nav-button" href="#">Home</a></li>
-                <li><a class="nav-button" href="#">About</a></li>
-                <li><a class="nav-button" href="#">Fin Facts</a></li>
-                <li><a class="nav-button" href="#">Dolphin Map</a></li>
-                <li><a class="nav-button" href="#">Dolphin Anatomy</a></li>
-            </ul>
+            <div class="menu">
+                <a href="/home">home</a>
+                <a href="/about">about</a>
+                <a href="/facts">fin facts</a>
+                <a href="/map">dolphin map</a>
+                <a href="/anatomy">dolphin anatomy</a>
+            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -161,7 +156,7 @@
         let body = document.querySelectorAll("body");
         applyMode(body, mode);
     }
-    
+
     function applyMode(elements, mode) {
         for (element of elements) {
             element.classList.add(mode);
