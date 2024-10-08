@@ -22,31 +22,33 @@
 </head>
 
 <body onload="changeMode()">
-
-    <header>
-        <a href="#"><img id="logo" src="images\dolphinLogo.png"></a>
-        <h1>flipper finder</h1>
-        <!-- Rounded switch - W3 Schools Toggle-->
-        <label class="switch">
-            <input type="checkbox" onchange="changeMode()">
-            <span class="slider round"></span>
-        </label>
-        <nav>
-            <div class="menu">
-                <a href="/home">home</a>
-                <a href="/about">about</a>
-                <a href="/facts">fin facts</a>
-                <a href="/map">dolphin map</a>
-                <a href="/anatomy">dolphin anatomy</a>
-            </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-        <img id="main-img">
-    </header>
+    <div class="head">
+        <div class="row">
+            <a href="#"><img id="logo" src="images\dolphin-logo-transparent.png"></a>
+            <h1>flipper finder</h1>
+            <!-- Rounded switch - W3 Schools Toggle-->
+            <label class="switch">
+                <input type="checkbox" onchange="changeMode()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="row color">
+            <nav>
+                <div class="menu">
+                    <a href="/home">home</a>
+                    <a href="/about">about</a>
+                    <a href="/facts">fin facts</a>
+                    <a href="/map">dolphin map</a>
+                    <a href="/anatomy">dolphin anatomy</a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </div>
     <div>
         <h2>About</h2>
         <p>Welcome to Flipper Finder!
@@ -104,9 +106,10 @@
                 href="https://catalog.data.gov/dataset/species-distribution-bottlenose-dolphin-hawaii">data</a>.</p>
     </footer>
 </body>
+<!-- https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci -->
 <script>
     const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("#nav-bar");
+    const navMenu = document.querySelector(".menu");
 
     hamburger.addEventListener("click", mobileMenu);
 
@@ -160,6 +163,8 @@
         applyMode(footer, mode);
         let body = document.querySelectorAll("body");
         applyMode(body, mode);
+        let colorBar = document.querySelectorAll(".head .row.color");
+        applyMode(colorBar, mode);
     }
 
     function applyMode(elements, mode) {

@@ -12,7 +12,7 @@ body.light, p.light, a.light {
   background-color: #ffffff;
 }
 
-nav.light, footer.light, ul.light li.light {
+footer.light, ul.light li.light, .head .row.color.light {
   background-color: #FFDBB1;
 }
 
@@ -20,10 +20,10 @@ footer > p.light {
   background-color: #FFDBB1;
 }
 
-nav.light, footer.light {
+footer.light .head .row.color.light {
   background-color: #FFDBB1;
   color: #332E3C;
-  }
+}
 
 h1.light, h2.light, h3.light, h4.light, h5.light {
   color: #332E3C;
@@ -36,7 +36,7 @@ body.dark, p.dark, a.dark {
   background-color: #332E3C;
 }
 
-nav.dark, footer.dark, ul.dark li.dark {
+footer.dark, ul.dark li.dark, .head .row.color.dark {
   background-color: #9FC9D1;
 }
 
@@ -44,7 +44,7 @@ footer > p.dark {
   background-color: #9FC9D1;
 }
 
-nav.dark, footer.dark {
+footer.dark, .head .row.color.dark {
   background-color: #9FC9D1;
   color: #ffffff;
   }
@@ -52,6 +52,11 @@ nav.dark, footer.dark {
 h1.dark, h2.dark, h3.dark, h4.dark, h5.dark {
   color: #ffffff;
 }
+
+/*
+Hamburger menu management based on
+https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci
+*/
 
 p, ul, li, a {
   font-family: "Jost", sans-serif;
@@ -62,11 +67,12 @@ p, ul, li, a {
 
 h1, h2, h3, h4, h5 {
   text-align: center;
-    font-family: "Vidaloka", serif;
-    font-weight: 400;
-    font-size: large;
-    font-style: bold;
-  }
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-size: large;
+  font-style: bold;
+  margin: 5px;
+}
 
 h1 {
   text-align: center;
@@ -97,23 +103,22 @@ li {
   background-color: #332E3C;
 }
 
-<!-- nav {
+nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #FFDBB1;
   padding: 0 0;
   margin-top: 5px;
-}--!>
-  .menu {
+}
+  
+.menu {
     gap: 20px;
     display: flex;
-    background-color: #FFDBB1;
     padding: 15px;
     justify-content: center;
-  }
+}
 
-  .menu > a {
+.menu > a {
     color: #332E3C;
     text-decoration: none;
     padding: 5px;
@@ -122,13 +127,13 @@ li {
     border-style: solid;
     border-width: 3px;
     border-color: #E0986B;
-  }
+}
 
-  .menu > a:hover {
+.menu > a:hover {
     background-color: #F0F0F0;
-  }
+}
 
-#nav-bar {
+.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,7 +147,7 @@ div {
   margin: 5px;
 }
 
-#nav-bar li {
+.menu li {
   margin: 10px;
 }
 
@@ -165,7 +170,7 @@ div {
 }
 
 @media (max-width: 700px) {
-  #nav-bar.active {
+  .menu.active {
     top: 5rem;
     display: flex;
     flex-direction: column;
@@ -173,7 +178,7 @@ div {
     width:100%;
     transition: 0.3s;
   }
-  #nav-bar {
+  .menu {
     display: none;
     flex-direction: row;
   }
@@ -190,10 +195,16 @@ div {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+  #logo {
+    display: none;
+  }
+  h1 {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 700px) {
-    #nav-bar {
+    .menu {
         justify-content: flex-end;
       }
     #creators {
@@ -206,8 +217,8 @@ div {
  .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 30px;
+  height: 18px;
 }
 
 /* Hide default HTML checkbox */
@@ -233,10 +244,10 @@ div {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2.5px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -251,16 +262,28 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 8.5px;
 }
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* Fixing Header layout */
+.head {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.head .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
