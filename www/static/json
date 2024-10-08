@@ -1,0 +1,39 @@
+{
+  "Dolphin_Anatomy": {
+    "Head": {
+      "Blowhole": "Located on top of the dolphin's head, used for breathing.",
+      "Melon": "The rounded, fatty organ located on the dolphin's forehead, used for echolocation.",
+      "Eyes": "Located on either side of the head, providing excellent vision both underwater and above water.",
+      "Rostrum": "The beak-like structure, often referred to as the dolphin's 'snout.'"
+    },
+    "Body": {
+      "Dorsal_Fin": "Located on the dolphin's back, it helps with stability and balance while swimming.",
+      "Pectoral_Fins": "Two fins located on either side of the dolphin, used for steering and stopping.",
+      "Fluke": "The dolphin's tail fin, which propels them forward through the water.",
+      "Skin": "Smooth and rubbery, with a layer of blubber underneath for insulation and buoyancy."
+    },
+    "Internal_Organs": {
+      "Lungs": "Used for breathing air at the surface through the blowhole.",
+      "Stomach": "Dolphins have a multi-chambered stomach to digest different types of food.",
+      "Heart": "A four-chambered heart, similar to other mammals, pumping blood throughout the dolphin's body.",
+      "Kidneys": "Dolphins have large kidneys that help them process salt from the ocean water."
+    },
+    "Senses": {
+      "Echolocation": "Dolphins use echolocation to detect objects in the water by emitting sound waves and listening for the echo.",
+      "Hearing": "Dolphins have acute hearing abilities, even underwater, thanks to specialized auditory structures.",
+      "Vision": "Dolphins have good vision, with the ability to see both in and out of water.",
+      "Touch": "Dolphins have sensitive skin, allowing them to detect changes in pressure and movement."
+    },
+    "Reproductive_System": {
+      "Male": {
+        "Testes": "Male dolphins have internal testes for sperm production.",
+        "Genital_Slit": "A slit located near the tail, which contains the genitals."
+      },
+      "Female": {
+        "Ovaries": "Females have two ovaries for egg production.",
+        "Mammary_Glands": "Located near the genital slit, used to nurse calves after birth.",
+        "Genital_Slit": "A slit located near the tail, where the birth canal is located."
+      }
+    }
+  }
+}
