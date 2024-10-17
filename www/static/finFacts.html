@@ -21,7 +21,7 @@
     </script>
 </head>
 
-<body onload="changeModeHelper('light')">
+<body onload="changeModeHelper('light'); getFacts()">
     <div class="head">
         <div class="row">
             <a href="#"><img id="logo" src="images\dolphin-logo-transparent.png"></a>
@@ -51,56 +51,35 @@
     </div>
     <div>
         <h2>Fin Facts</h2>
-        <p> 
-            Dolphins are highly intelligent: Dolphins have large brains relative to their body size, and they display complex behaviors like problem-solving, using tools, and even teaching each other. 
-        </p>
+        <div id="fact-field">
+        </div>
         <p>
-            They use echolocation: Dolphins emit sounds that bounce off objects, allowing them to "see" their environment through sound. This helps them navigate and hunt in murky waters.
-        </p>
-        <p>
-            Dolphins have names: Dolphins use specific whistles to identify each other, which scientists refer to as "signature whistles"—essentially, they call each other by name!
-        </p>
-        <p>
-            They are fast swimmers: Dolphins can reach speeds of up to 37 mph (60 km/h) when swimming, making them some of the fastest animals in the ocean.
-        </p>
-        <p>
-            Dolphins love to surf: Wild dolphins have been observed riding waves just for fun, often seen surfing alongside boats or in the wake of large ships.
-        </p>
-        <p>
-            They sleep with one eye open: Dolphins rest one half of their brain at a time while the other half remains awake to monitor the environment for predators or threats.
-        </p>
-        <p>
-            Dolphins have strong social bonds: They live in groups called pods and are known for their strong friendships, often seen playing, hunting, and protecting each other.
-        </p>
-        <p>
-            They help humans in the wild: There are documented cases of dolphins rescuing humans from shark attacks and guiding stranded people back to shore.
-        </p>
-        <p>
-            They can hold their breath for long periods: Dolphins can stay underwater for up to 15 minutes, but they usually surface to breathe every few minutes.
-        </p>
-        <p>
-            Dolphins are great imitators: They can mimic the movements and vocalizations of other animals and even human behaviors, which is a sign of advanced learning ability.
-        </p>
-        <p>
-            They communicate with clicks, whistles, and body language: Dolphins use a variety of sounds and movements to communicate, including tail slaps, leaps, and jaw claps.
-        </p>
-        <p>
-            Dolphin babies are called calves: Calves are born tail-first to prevent drowning, and they stay close to their mothers for protection and nursing.
-        </p>
-        <p>
-            Dolphins can recognize themselves in mirrors: They are one of the few animals, along with great apes and elephants, that show signs of self-awareness.
-        </p>
-        <p>
-            They are playful and creative: Dolphins have been seen blowing bubble rings, playing with seaweed, and even playing "catch" with fish.
-        </p>
-        <p>
-            There are over 40 species of dolphins: While most dolphins live in saltwater, there are also a few species of river dolphins that live in freshwater.
+            Find even more fun facts at sites like
+            <a href="https://www.natgeokids.com/uk/discover/animals/sea-life/dolphins/">Nat Geo Kids</a>
+            or
+            <a href="https://reef-world.org/blog/world-dolphin-day">The Reef-World Foundation</a>.
         </p>
     </div>
     <footer>
         <p>Thanks to the National Oceanic and Atmospheric Administration and Department of Commerce for <a
                 href="https://catalog.data.gov/dataset/species-distribution-bottlenose-dolphin-hawaii">data</a>.</p>
     </footer>
+
+    <script>
+        async function getFacts() {
+            let prom = await fetch("http://127.0.0.1:5000/finFacts");
+            let facts = await prom.json();
+
+            let div = document.getElementById("fact-field");
+            for (fact in facts) {
+                let text = facts[fact];
+                console.log(text);
+                let item = document.createElement("p");
+                item.appendChild(document.createTextNode(text));
+                div.appendChild(item)
+            }
+        }
+    </script>
 </body>
 <!-- https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci -->
 <script>
