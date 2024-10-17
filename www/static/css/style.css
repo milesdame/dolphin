@@ -314,3 +314,11 @@ input:checked + .slider:before {
 path:hover {
   fill: green !important;
 }
+
+#anatomy {
+  display: flex;
+}
+
+svg {
+  height: auto;
+}
