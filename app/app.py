@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
+import json
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -26,3 +27,7 @@ def csc_342_groups():
         'Programmer(s)': ['Emirhan Gencer']}}
     return jsonify(groups)
 
+@app.route("/anatomy")
+def anatomy():
+    with open('anatomy.json') as f:
+        dolphin = json.load(f)
