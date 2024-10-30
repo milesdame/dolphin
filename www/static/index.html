@@ -21,7 +21,7 @@
     </script>
 </head>
 
-<body onload="changeModeHelper('light'); getFacts()">
+<body onload="changeModeHelper('light')">
     <div class="head">
         <div class="row">
             <a href="#"><img id="logo" src="images\dolphin-logo-transparent.png"></a>
@@ -50,36 +50,15 @@
         </div>
     </div>
     <div>
-        <h2>Fin Facts</h2>
-        <div id="fact-field">
-        </div>
-        <p>
-            Find even more fun facts at sites like
-            <a href="https://www.natgeokids.com/uk/discover/animals/sea-life/dolphins/">Nat Geo Kids</a>
-            or
-            <a href="https://reef-world.org/blog/world-dolphin-day">The Reef-World Foundation</a>.
+        <h2>Home</h2>
+        <p>words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words
         </p>
     </div>
+
     <footer>
         <p>Thanks to the National Oceanic and Atmospheric Administration and Department of Commerce for <a
                 href="https://catalog.data.gov/dataset/species-distribution-bottlenose-dolphin-hawaii">data</a>.</p>
     </footer>
-
-    <script>
-        async function getFacts() {
-            let prom = await fetch("/finFacts");
-            let facts = await prom.json();
-
-            let div = document.getElementById("fact-field");
-            for (fact in facts) {
-                let text = facts[fact];
-                console.log(text);
-                let item = document.createElement("p");
-                item.appendChild(document.createTextNode(text));
-                div.appendChild(item)
-            }
-        }
-    </script>
 </body>
 <!-- https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci -->
 <script>

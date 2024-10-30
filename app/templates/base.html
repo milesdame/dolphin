@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        flipper finder 2.0
+        {% block title %}{% endblock %}
     </title>
 
     <!-- Fonts from Google -->
@@ -14,7 +14,7 @@
         rel="stylesheet">
 
     <!--ours / class content-->
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <meta name="viewport" content="width=device-width">
     <script>
         let theme = "light";
@@ -24,7 +24,7 @@
 <body onload="changeModeHelper('light')">
     <div class="head">
         <div class="row">
-            <a href="#"><img id="logo" src="images\dolphin-logo-transparent.png"></a>
+            <a href="#"><img id="logo" src="{{ url_for('static', filename='images/dolphinLogo.png') }}"></a>
             <h1>flipper finder</h1>
             <!-- Rounded switch - W3 Schools Toggle-->
             <label class="switch">
@@ -35,11 +35,11 @@
         <div class="row color">
             <nav>
                 <div class="menu">
-                    <a href="/www/static/home.html">home</a>
-                    <a href="/www/static/about.html">about</a>
-                    <a href="/www/static/finFacts.html">fin facts</a>
-                    <a href="/www/static/map.html">dolphin map</a>
-                    <a href="/www/static/anatomy.html">dolphin anatomy</a>
+                    <a href="{{ url_for('static', filename='index.html') }}">home</a>
+                    <a href="{{ url_for('static', filename='about.html') }}">about</a>
+                    <a href="{{ url_for('static', filename='finFacts.html') }}">fin facts</a>
+                    <a href="{{ url_for('static', filename='map.html') }}">dolphin map</a>
+                    <a href="{{ url_for('static', filename='anatomy.html') }}">dolphin anatomy</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -49,11 +49,10 @@
             </nav>
         </div>
     </div>
-    <div>
-        <h2>Home</h2>
-        <p>words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words
-        </p>
-    </div>
+
+
+    {% block content %} {% endblock %}
+
 
     <footer>
         <p>Thanks to the National Oceanic and Atmospheric Administration and Department of Commerce for <a

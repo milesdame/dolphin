@@ -79,6 +79,10 @@ h1 {
   font-size: 130px;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 footer {
     text-align: center;
     padding: 3px;
@@ -199,6 +203,15 @@ div {
   }
   h1 {
     font-size: 40px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width:1050px) {
+  #voyager {
+    display: none;
   }
 }
 
@@ -321,4 +334,33 @@ path:hover {
 
 svg {
   height: auto;
+}
+
+/* Dolphin types cards */
+#dolphinTypes { 
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content:center;
+}
+
+.card {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  max-width: max-content;
+}
+
+.card p {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
+
+.card img {
+  width: 50%;
 }

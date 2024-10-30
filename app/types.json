@@ -1,0 +1,58 @@
+{
+    "bottlenose": {
+        "common_name": "Bottlenose Dolphin",
+        "sci_name": "Delphinus truncatus",
+        "length": 4,
+        "weight": 300,
+        "life_span": 40,
+        "desc": "Common bottlenose dolphins (referred to simply as bottlenose dolphins) are found throughout the world in both offshore and coastal waters, including harbors, bays, gulfs, and estuaries of temperate and tropical waters (estuaries are the areas where rivers meet the sea). They are one of the most well_studied marine mammals in the wild. Common bottlenose dolphins get their name from their short, thick snout (or rostrum). They are generally gray in color."
+    },
+    "fraser": {
+        "common_name": "Fraser's Dolphin",
+        "sci_name": "Lagenodelphis hosei",
+        "length": 2.75,
+        "Weight": 200,
+        "life_span": 18,
+        "desc": "Fraser's dolphins are found in deep, tropical waters worldwide. They are active swimmers and are usually found in groups of 10 to 100 individuals, but they sometimes travel in groups of up to 1,000. All Fraser's dolphins have a dark stripe that extends down their side from eye to pectoral flipper."
+    },
+    "risso": {
+        "common_name": "Risso's Dolphin",
+        "sci_name": "Grampus griseus",
+        "length": 3,
+        "weight": 400,
+        "life_span": 35,
+        "desc": "Risso's dolphins are typically found in groups of between 10 and 30 animals, though they have been reported as solitary individuals, in pairs, or in loose aggregations in the hundreds or thousands. As Risso's dolphins age, their coloration lightens from black, dark gray, or brown to pale gray or almost white. Adult Risso's dolphins typically have distinct and heavy scarring."
+    },
+    "rough_toothed": {
+        "common_name": "Rough_Toothed Dolphin",
+        "sci_name": "Steno bredanensis",
+        "length": 2.5,
+        "weight": 155,
+        "life_span": 36,
+        "desc": "Their common name was based on the ridges found on their teeth, which are unique to this species. Rough_toothed dolphins can remain underwater for up to 15 minutes. They are generally found in deep oceanic waters in tropical to warmer temperate areas of the Atlantic, Pacific, and Indian Oceans."
+    },
+    "spinner": {
+        "common_name": "Spinner Dolphin",
+        "sci_name": "Stenella longirostris",
+        "length": 1.8,
+        "weight": 70,
+        "life_span": 20,
+        "desc": " Spinner dolphins received their common name because they are often seen leaping and spinning out of the water. Spinner dolphins are relatively small compared with other species of oceanic dolphins. Spinner dolphins feed at night on species including small fish, shrimp, and squid. Spinner dolphins are especially threatened by human tourism activities."
+    },
+    "pantropical": {
+        "common_name": "Pantropical Spotted Dolphin",
+        "sci_name": "Stenella attenuata",
+        "length": 2.5,
+        "weight": 125,
+        "life_span": 46,
+        "desc": "Pantropical spotted dolphins do not have spots at birth but accumulate them as they age until they are almost completely covered with overlapping patterns. They usually occur in groups of several hundres to 1,000 and are quite social, often schooling with other species. These dolphins are at high risk of entanglement in fishing nets, as they often swim alongside tuna."
+    },
+    "striped": {
+        "common_name": "Striped Dolphin",
+        "sci_name": "Stenella coeruleoalba",
+        "length": 2.4,
+        "weight": 155,
+        "life_span": 58,
+        "desc": "Striped dolphins are known for their distinct and striking coloration pattern, which includes bold, thin stripes that extend from the eye to the flipper and another set of stripes down the side of the body.  They are capable of diving to at least 2,300 feet in search of their fish and cephalopod prey. They display a unique behavior called roto_tailing, when the animal leaps high out of the water and vigorously rotates its tail while airborne."
+    }
+}

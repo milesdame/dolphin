@@ -35,11 +35,11 @@
         <div class="row color">
             <nav>
                 <div class="menu">
-                    <a href="/www/static/home.html">home</a>
-                    <a href="/www/static/about.html">about</a>
-                    <a href="/www/static/finFacts.html">fin facts</a>
-                    <a href="/www/static/map.html">dolphin map</a>
-                    <a href="/www/static/anatomy.html">dolphin anatomy</a>
+                    <a href="index.html">home</a>
+                    <a href="about.html">about</a>
+                    <a href="finFacts.html">fin facts</a>
+                    <a href="map.html">dolphin map</a>
+                    <a href="anatomy.html">dolphin anatomy</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -51,8 +51,67 @@
     </div>
     <div>
         <h2>Map</h2>
-        <p>words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words 
-        </p>
+        <p>Map will display here!</p>
+
+        <div id="voyager">
+        <!-- embed credit to https://smithsonian.github.io/dpo-voyager/explorer/usage/ -->
+        <iframe name="Dolphin Voyager" src="https://www.pacioos.hawaii.edu/voyager/index.html?b=16.349,-170.262386,26.890106,-151.596614&s=1&t=m&o=dolph" width="1000" height="650" allow="xr; xr-spatial-tracking; fullscreen"></iframe>
+        </div>
+
+        <h2>Explore Types of Dolphins</h2>
+        <p>Click in to see details by species of dolphin present in this area.</p>
+        <div id="dolphinTypes">
+        <div class="row">
+            <a href = "/types/bottlenose">
+            <div class="card">
+                <img src="images/bottlenose.png">
+                <p>Bottlenose Dolphin</p>
+            </div>
+            </a>
+            <a href = "/types/fraser">
+            <div class="card">
+                <img src="images/fraser.png">
+                <p>Fraser's Dolphin</p>
+            </div>
+            </a>
+        </div>
+        <div class="row">
+            <a href = "/types/pantropical">
+            <div class="card">
+                <img src="images/pantropical.png">
+                <p>Pantropical Spotted Dolphin</p>
+            </div>
+            </a>
+            <a href = "/types/risso">
+            <div class="card">
+                <img src="images/risso.png">
+                <p>Risso's Dolphin</p>
+            </div>
+            </a>
+        </div>
+        <div class="row">
+            <a href = "/types/rough-toothed">
+            <div class="card">
+                <img src="images/rough-toothed.png">
+                <p>Rough-Toothed Dolphin</p>
+            </div>
+            </a>
+            <a href = "/types/spinner">
+            <div class="card">
+                <img src="images/spinner.png">
+                <p>Spinner Dolphin</p>
+            </div>
+            </a>
+        </div>
+        <div class="row">
+            <a href = "/types/striped">
+            <div class="card">
+                <img src="images/striped.png">
+                <p>Striped Dolphin</p>
+            </div>
+            </a>
+        </div>
+        </div>
     </div>
     <footer>
         <p>Thanks to the National Oceanic and Atmospheric Administration and Department of Commerce for <a
