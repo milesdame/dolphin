@@ -1,17 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %} {{ title }} {% endblock %}
+{% block title %} {{ info["common_name"] }} {% endblock %}
 
 {% block content %}
 
-<h2>{{ heading }}</h2>
+<h2>{{ info["common_name"] }}</h2>
 
-<p><b>Common Name: </b>{{ common_name }}</p>
-<p><b>Scientific Name: </b><i>{{ sci_name }}</i></p>
-<p><b>Length: </b>{{ length }} m</p>
-<p><b>Adult Weight: </b> {{ weight }} kg</p>
-<p><b>Life Span: </b>{{ life_span }} years</p>
-<p><b>Description: </b>{{ desc }}</p>
+<img src="{{ url_for('static', filename='images/'+ info['common_name']+'.png') }}">
+
+<p><b>Common Name: </b>{{ info["common_name"] }}</p>
+<p><b>Scientific Name: </b><i>{{ info["sci_name"] }}</i></p>
+<p><b>Length: </b>{{ info[]"length"] }} m</p>
+<p><b>Adult Weight: </b> {{ info["weight"] }} kg</p>
+<p><b>Life Span: </b>{{ info["life_span"] }} years</p>
+<p><b>Description: </b>{{ info["desc"] }}</p>
 
 <p>Information from <a href="https://www.fisheries.noaa.gov/dolphins-porpoises#by-species">NOAA</a></p>
 
