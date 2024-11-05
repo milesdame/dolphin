@@ -328,6 +328,10 @@ path:hover {
   fill: green !important;
 }
 
+path:active {
+  fill: blueviolet !important;
+}
+
 #anatomy {
   display: flex;
 }

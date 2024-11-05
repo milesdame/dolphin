@@ -18,6 +18,9 @@
     <meta name="viewport" content="width=device-width">
     <script>
         let theme = "light";
+
+        
+
     </script>
 </head>
 
@@ -60,9 +63,9 @@
         </p>
     <div id="anatomy-container"></div>
     
-    <script src="anatomy.js"></script>
+    
     <section id="anatomy">
-            <svg
+        <svg
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:cc="http://creativecommons.org/ns#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -3682,6 +3685,26 @@
     </g>
             </svg>
     </section>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+        // Zoom and pan code based on D3 tutorial available at: https://www.d3indepth.com/zoom-and-pan/
+        let zoom = d3.zoom()
+            .scaleExtent([1, 10])
+            .translateExtent([[0, 0], [600, 400]])
+            .on('zoom', handleZoom);
+
+        function handleZoom(e) {
+            d3.select('svg g')
+                .attr('transform', e.transform);
+        }
+
+        function initZoom() {
+            d3.select('svg')
+                .call(zoom);
+        }
+
+        initZoom();
+    </script>
     <footer>
         <p>Thanks to the National Oceanic and Atmospheric Administration and Department of Commerce for <a
                 href="https://catalog.data.gov/dataset/species-distribution-bottlenose-dolphin-hawaii">data</a>.</p>
