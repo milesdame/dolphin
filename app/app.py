@@ -20,7 +20,7 @@ def make_type_page(type):
         dolphin_type_data = json.load(f)
 
     info = dolphin_type_data[type]
-    return render_template('types.html', info)
+    return render_template('types.html', info=info)
 #                           title = info["common_name"],
 #                           heading = info["common_name"],
 #                           common_name = info["common_name"],
