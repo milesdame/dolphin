@@ -12,6 +12,6 @@ def client():
     with app.test_client() as client:
         yield client        
 
-def test_some_route(client):
+def test_fin_facts(client):
     response = client.get('/finFacts')
     assert response.status_code == 200
