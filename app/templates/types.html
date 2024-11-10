@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<h2>{{ info["common_name"] }}</h2>
+<h2>{{ info[common_name] }}</h2>
 
 <img src="{{ url_for('static', filename='images/'+ info['common_name']+'.png') }}">
 
