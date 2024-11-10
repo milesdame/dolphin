@@ -3689,8 +3689,8 @@
     <script>
         // Zoom and pan code based on D3 tutorial available at: https://www.d3indepth.com/zoom-and-pan/
         let zoom = d3.zoom()
-            .scaleExtent([1, 10])
-            .translateExtent([[0, 0], [600, 400]])
+            .scaleExtent([.1, 1])
+            .translateExtent([[-1246.3125, 0], [2492.625, 1492.6582]])
             .on('zoom', handleZoom);
 
         function handleZoom(e) {
