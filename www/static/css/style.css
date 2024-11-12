@@ -323,6 +323,10 @@ input:checked + .slider:before {
 }
 
 /* CSS for SVG */ 
+text:hover {
+  fill: green !important;
+  background-color: #2196F3;
+}
 
 path:hover {
   fill: green !important;
