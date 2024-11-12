@@ -1,6 +1,7 @@
 {
   "Dolphin_Anatomy": {
     "Blowhole": "Located on top of the dolphin's head, used for breathing.",
+    "Lungs": "Used for breathing air at the surface through the blowhole.",
     "Head": {
       "Melon": "The rounded, fatty organ located on the dolphin's forehead, used for echolocation.",
       "Eyes": "Located on either side of the head, providing excellent vision both underwater and above water.",
@@ -13,7 +14,6 @@
       "Skin": "Smooth and rubbery, with a layer of blubber underneath for insulation and buoyancy."
     },
     "Internal_Organs": {
-      "Lungs": "Used for breathing air at the surface through the blowhole.",
       "Stomach": "Dolphins have a multi-chambered stomach to digest different types of food.",
       "Heart": "A four-chambered heart, similar to other mammals, pumping blood throughout the dolphin's body.",
       "Kidneys": "Dolphins have large kidneys that help them process salt from the ocean water."
