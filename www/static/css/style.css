@@ -328,7 +328,7 @@ text:hover {
   background-color: #2196F3;
 }
 
-#intestines:hover path, #brain:hover path{
+#intestines:hover path, #brain:hover path, #kidneys:hover path, #heart:hover path, #eyes:hover path, #teeth:hover path{
   fill: green !important;
 }
 
@@ -337,7 +337,7 @@ path:hover {
 }
 
 
-#intestines:active path, #brain:active path {
+#intestines:active path, #brain:active path, #kidneys:active path, #heart:active path, #eyes:active path, #teeth:active path {
   fill: blueviolet !important;
 }
 
