@@ -328,9 +328,13 @@ text:hover {
   background-color: #2196F3;
 }
 
+#intestines:hover path{
+  fill: green !important;
+}
 path:hover {
   fill: green !important;
 }
+
 
 path:active {
   fill: blueviolet !important;
