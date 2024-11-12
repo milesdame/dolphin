@@ -3596,24 +3596,18 @@
     </section>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script>
-        // Zoom and pan code based on D3 tutorial available at: https://www.d3indepth.com/zoom-and-pan/
-        let zoom = d3.zoom()
-            .scaleExtent([.1, 4])
-            .translateExtent([[-1246.3125, 0], [2492.625, 1492.6582]])
-            .on('zoom', handleZoom);
+        if(window.screen.width < 1090) { 
+            console.log("HERE!")
+            let script = document.createElement('script');
 
-        function handleZoom(e) {
-            d3.select('svg g')
-                .attr('transform', e.transform);
+            script.setAttribute('src', '/www/static/js/zoom-pan.js');
+            document.getElementById('zoom-control').appendChild(script);
         }
-
-        function initZoom() {
-            d3.select('svg')
-                .call(zoom);
-        }
-
-        initZoom();
     </script>
+    <div id="zoom-control">
+        
+    </div>
+
     <footer>
         <p>Thanks to the National Oceanic and Atmospheric Administration and Department of Commerce for <a
                 href="https://catalog.data.gov/dataset/species-distribution-bottlenose-dolphin-hawaii">data</a>.</p>
