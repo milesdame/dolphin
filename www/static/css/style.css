@@ -328,13 +328,18 @@ text:hover {
   background-color: #2196F3;
 }
 
-#intestines:hover path{
+#intestines:hover path, #brain:hover path{
   fill: green !important;
 }
+
 path:hover {
   fill: green !important;
 }
 
+
+#intestines:active path, #brain:active path {
+  fill: blueviolet !important;
+}
 
 path:active {
   fill: blueviolet !important;
