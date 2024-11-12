@@ -210,6 +210,10 @@
                 let para = document.getElementById("anatomy-fact");
                 h2.innerHTML = bodypart;
                 para.innerHTML = anatomy["Dolphin_Anatomy"][bodypart];
+                
+                let btn = document.createElement('button');
+                btn.innerHTML = "Return to Anatomy Diagram";
+                document.getElementById('anatomy-container').appendChild(btn);
             }
     
             
