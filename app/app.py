@@ -21,12 +21,3 @@ def make_type_page(type):
 
     info = dolphin_type_data[type]
     return render_template('types.html', info=info)
-#                           title = info["common_name"],
-#                           heading = info["common_name"],
-#                           common_name = info["common_name"],
-#                           sci_name = info["sci_name"],
-#                           length = info["length"],
-#                           weight = info["weight"],
-#                           life_span = info["life_span"],
-#                           desc = info["desc"]
-#                           )
