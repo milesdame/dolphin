@@ -24,7 +24,7 @@
     </script>
 </head>
 
-<body onload="changeModeHelper('light')">
+<body onload="themeSet()">
     <div class="head">
         <div class="row">
             <a href="#"><img id="logo" src="static\images\dolphin-logo-transparent.png"></a>
@@ -3603,6 +3603,24 @@
             script.setAttribute('src', '/www/static/js/zoom-pan.js');
             document.getElementById('zoom-control').appendChild(script);
         }
+
+        // Zoom and pan code based on D3 tutorial available at: https://www.d3indepth.com/zoom-and-pan/
+        let zoom = d3.zoom()
+        .scaleExtent([.1, 4])
+        .translateExtent([[-1246.3125, 0], [2492.625, 1492.6582]])
+        .on('zoom', handleZoom);
+
+        function handleZoom(e) {
+            d3.select('svg g')
+                .attr('transform', e.transform);
+        }
+
+        function initZoom() {
+            d3.select('svg')
+                .call(zoom);
+        }
+
+        initZoom();
     </script>
     <div id="zoom-control">
         
@@ -3635,14 +3653,30 @@
     }
 </script>
 <script>
+    function themeSet(){
+        if (sessionStorage.getItem('theme') == null) {
+            sessionStorage.setItem('theme', 'light');
+        } 
+
+        if (sessionStorage.getItem('theme') == 'dark') {
+            changeModeHelper('dark');
+        }
+
+        if (sessionStorage.getItem('theme') == 'light') {
+            changeModeHelper('light');
+        }
+
+        
+    }
+
     function changeMode() {
         console.log("Theme: " + theme);
-        if (theme == "dark") {
-            changeModeHelper("light")
-            theme = "light";
+        if (sessionStorage.getItem('theme') == 'light') {
+            changeModeHelper('dark');
+            sessionStorage.setItem('theme', 'dark');
         } else {
-            changeModeHelper("dark")
-            theme = "dark";
+            changeModeHelper('light')
+            sessionStorage.setItem('theme', 'light');
         }
     }
 

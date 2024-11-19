@@ -21,7 +21,7 @@
     </script>
 </head>
 
-<body onload="changeModeHelper('light')">
+<body onload="themeSet()">
     <div class="head">
         <div class="row">
             <a href="#"><img id="logo" src="static\images\dolphin-logo-transparent.png"></a>
@@ -87,14 +87,30 @@
     }
 </script>
 <script>
+    function themeSet(){
+        if (sessionStorage.getItem('theme') == null) {
+            sessionStorage.setItem('theme', 'light');
+        } 
+
+        if (sessionStorage.getItem('theme') == 'dark') {
+            changeModeHelper('dark');
+        }
+
+        if (sessionStorage.getItem('theme') == 'light') {
+            changeModeHelper('light');
+        }
+
+        
+    }
+
     function changeMode() {
         console.log("Theme: " + theme);
-        if (theme == "dark") {
-            changeModeHelper("light")
-            theme = "light";
+        if (sessionStorage.getItem('theme') == 'light') {
+            changeModeHelper('dark');
+            sessionStorage.setItem('theme', 'dark');
         } else {
-            changeModeHelper("dark")
-            theme = "dark";
+            changeModeHelper('light')
+            sessionStorage.setItem('theme', 'light');
         }
     }
 
