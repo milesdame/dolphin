@@ -1,0 +1,45 @@
+{
+  "Dolphin_Anatomy": {
+    "blowhole": "Located on top of the dolphin's head, used for breathing.",
+    "lungs": "Used for breathing air at the surface through the blowhole.",
+    "melon": "The rounded, fatty organ located on the dolphin's forehead, used for echolocation.",
+    "eyes": "Located on either side of the head, providing excellent vision both underwater and above water.",
+    "intestines": "The intestines are part of the digestive system, processing food and absorbing nutrients before waste is expelled.",
+    "brain": "Dolphins have highly developed brains with advanced areas for processing emotions, communication, and problem-solving.",
+    "kidneys": "Dolphins have large kidneys that help them process salt from the ocean water.",
+    "heart": "A four-chambered heart, similar to other mammals, pumping blood throughout the dolphin's body.",
+    "stomach": "Dolphins have a multi-chambered stomach to digest different types of food.",
+    "larynx": "The larynx in dolphins allows them to produce sounds used in communication and echolocation.",
+    "pelvis": "A small, vestigial pelvis is present, a remnant of their land-dwelling ancestors.",
+    "spinal Column": "The spinal column provides structural support and flexibility, allowing agile movements in the water.",
+    "Head": {
+      "Rostrum": "The beak-like structure, often referred to as the dolphin's 'snout.'"
+    },
+    "Body": {
+      "Dorsal_Fin": "Located on the dolphin's back, it helps with stability and balance while swimming.",
+      "Pectoral_Fins": "Two fins located on either side of the dolphin, used for steering and stopping.",
+      "Fluke": "The dolphin's tail fin, which propels them forward through the water.",
+      "Skin": "Smooth and rubbery, with a layer of blubber underneath for insulation and buoyancy."
+    },
+    "Internal_Organs": {
+      "Stomach": "Dolphins have a multi-chambered stomach to digest different types of food."
+    },
+    "Senses": {
+      "Echolocation": "Dolphins use echolocation to detect objects in the water by emitting sound waves and listening for the echo.",
+      "Hearing": "Dolphins have acute hearing abilities, even underwater, thanks to specialized auditory structures.",
+      "Vision": "Dolphins have good vision, with the ability to see both in and out of water.",
+      "Touch": "Dolphins have sensitive skin, allowing them to detect changes in pressure and movement."
+    },
+    "Reproductive_System": {
+      "Male": {
+        "Testes": "Male dolphins have internal testes for sperm production.",
+        "Genital_Slit": "A slit located near the tail, which contains the genitals."
+      },
+      "Female": {
+        "Ovaries": "Females have two ovaries for egg production.",
+        "Mammary_Glands": "Located near the genital slit, used to nurse calves after birth.",
+        "Genital_Slit": "A slit located near the tail, where the birth canal is located."
+      }
+    }
+  }
+}
