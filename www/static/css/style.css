@@ -282,7 +282,7 @@ input:focus + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(13px);
   -ms-transform: translateX(13px);
-  transform: translateX(24px);
+  transform: translateX(12px);
 }
 
 /* Rounded sliders */
@@ -307,6 +307,12 @@ input:checked + .slider:before {
   }
   .slider.round {
     border-radius: 19px;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(24px);
   }
 }
 
