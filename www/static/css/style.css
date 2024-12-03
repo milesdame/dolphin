@@ -381,3 +381,21 @@ svg {
 .card img {
   width: 50%;
 }
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+video {
+  max-width: 100%; /* Ensures responsiveness */
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.video-citation {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 10px;
+}
