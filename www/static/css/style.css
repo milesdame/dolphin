@@ -113,7 +113,7 @@ nav {
   padding: 0 0;
   margin-top: 5px;
 }
-  
+
 .menu {
     gap: 20px;
     display: flex;
@@ -282,7 +282,7 @@ input:focus + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(13px);
   -ms-transform: translateX(13px);
-  transform: translateX(12px);
+  transform: translateX(24px);
 }
 
 /* Rounded sliders */
@@ -302,17 +302,11 @@ input:checked + .slider:before {
   .slider:before {
     height: 26px;
     width: 26px;
-    left: 3px;
+    left: 4px;
     bottom: 5px;
   }
   .slider.round {
     border-radius: 19px;
-  }
-
-  input:checked + .slider:before {
-    -webkit-transform: translateX(13px);
-    -ms-transform: translateX(13px);
-    transform: translateX(24px);
   }
 }
 
@@ -328,7 +322,7 @@ input:checked + .slider:before {
   align-items: center;
 }
 
-/* CSS for SVG */ 
+/* CSS for SVG */
 text:hover {
   fill: green !important;
   background-color: #2196F3;
@@ -360,7 +354,7 @@ svg {
 }
 
 /* Dolphin types cards */
-#dolphinTypes { 
+#dolphinTypes {
   display: flex;
   flex-direction: column;
   flex-wrap:wrap;
@@ -394,7 +388,7 @@ svg {
 }
 
 video {
-  max-width: 100%; /* Ensures responsiveness */
+  max-width: 100%;
   border: 2px solid #000;
   border-radius: 10px;
 }
