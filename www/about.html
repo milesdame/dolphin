@@ -55,7 +55,7 @@
     <h2>Meet the Team</h2>
     <div class="row" id="creators">
         <div class="bio">
-            <img class="mii" alt="" src="">
+            <img class="mii" alt="" src="static/images/julia_mii.png">
             <h3>Julia</h3>
             <p>Major: Computer Science</p>
             <p>Class of 2025</p>
@@ -142,7 +142,6 @@
     }
 
     function changeMode() {
-        console.log("Theme: " + theme);
         if (sessionStorage.getItem('theme') == 'light') {
             changeModeHelper('dark');
             sessionStorage.setItem('theme', 'dark');

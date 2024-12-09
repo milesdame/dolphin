@@ -145,7 +145,6 @@
     }
 
     function changeMode() {
-        console.log("Theme: " + theme);
         if (sessionStorage.getItem('theme') == 'light') {
             changeModeHelper('dark');
             sessionStorage.setItem('theme', 'dark');
