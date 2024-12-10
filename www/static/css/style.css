@@ -403,3 +403,9 @@ video {
 .mii {
   height: 40vh;
 }
+
+/* Map Styles */
+
+#map { 
+  height: 75vh; 
+}
