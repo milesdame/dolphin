@@ -16,15 +16,12 @@
     <!--ours / class content-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <meta name="viewport" content="width=device-width">
-    <script>
-        let theme = "light";
-    </script>
 </head>
 
 <body onload="themeSet()">
     <div class="head">
         <div class="row">
-            <a href="#"><img id="logo" src="{{ url_for('static', filename='images/dolphinLogo.png') }}"></a>
+            <a href="#"><img id="logo" src="{{ url_for('static', filename='images/dolphin-logo-transparent.png') }}"></a>
             <h1>flipper finder</h1>
             <!-- Rounded switch - W3 Schools Toggle-->
             <label class="switch">
@@ -35,11 +32,12 @@
         <div class="row color">
             <nav>
                 <div class="menu">
-                    <a href="/index.html">home</a>
-                    <a href="/about.html">about</a>
-                    <a href="/finFacts.html">fin facts</a>
-                    <a href="/map.html">dolphin map</a>
-                    <a href="/anatomy.html">dolphin anatomy</a>
+                    <a href="index.html">home</a>
+                    <a href="about.html">about</a>
+                    <a href="species.html">species</a>
+                    <a href="finFacts.html">facts</a>
+                    <a href="map.html">map</a>
+                    <a href="anatomy.html">anatomy</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -98,7 +96,6 @@
     }
 
     function changeMode() {
-        console.log("Theme: " + theme);
         if (sessionStorage.getItem('theme') == 'light') {
             changeModeHelper('dark');
             sessionStorage.setItem('theme', 'dark');

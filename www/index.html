@@ -16,9 +16,6 @@
     <!--ours / class content-->
     <link rel="stylesheet" href="static\css\style.css">
     <meta name="viewport" content="width=device-width">
-    <script>
-        let theme = "light";
-    </script>
 </head>
 
 <body onload="themeSet()">
@@ -37,9 +34,10 @@
                 <div class="menu">
                     <a href="index.html">home</a>
                     <a href="about.html">about</a>
-                    <a href="finFacts.html">fin facts</a>
-                    <a href="map.html">dolphin map</a>
-                    <a href="anatomy.html">dolphin anatomy</a>
+                    <a href="species.html">species</a>
+                    <a href="finFacts.html">facts</a>
+                    <a href="map.html">map</a>
+                    <a href="anatomy.html">anatomy</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -86,6 +84,22 @@
             parks, where visitors can swim and play with dolphins. However, this kind of entertainment is often stressful to the 
             dolphins and the swim tanks may be insufficient habitat for them.
         </p>
+        <div>
+            <h2>Watch Dolphins in Action!</h2>
+            <p>Enjoy this short video showcasing the beauty and agility of dolphins in their natural habitat!</p>
+            <div class="video-wrapper">
+                <video controls width="400" height="225">
+                    <source src="static/videos/dolphin-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag. Please download the video 
+                    <a href="static/videos/dolphin-video.mp4">here</a>.
+                </video>
+            </div>
+            <p class="video-citation">Video courtesy of the <a href="https://sanctuaries.noaa.gov/" target="_blank">Office of National Marine Sanctuaries</a>.</p>
+
+        </div>
+        
+        
+        
     </div>
 
     <footer>
@@ -132,7 +146,6 @@
     }
 
     function changeMode() {
-        console.log("Theme: " + theme);
         if (sessionStorage.getItem('theme') == 'light') {
             changeModeHelper('dark');
             sessionStorage.setItem('theme', 'dark');

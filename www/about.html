@@ -16,9 +16,6 @@
     <!--ours / class content-->
     <link rel="stylesheet" href="\static\css\style.css">
     <meta name="viewport" content="width=device-width">
-    <script>
-        let theme = "light";
-    </script>
 </head>
 
 <body onload="themeSet()">
@@ -37,9 +34,10 @@
                 <div class="menu">
                     <a href="index.html">home</a>
                     <a href="about.html">about</a>
-                    <a href="finFacts.html">fin facts</a>
-                    <a href="map.html">dolphin map</a>
-                    <a href="anatomy.html">dolphin anatomy</a>
+                    <a href="species.html">species</a>
+                    <a href="finFacts.html">facts</a>
+                    <a href="map.html">map</a>
+                    <a href="anatomy.html">anatomy</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -57,12 +55,14 @@
     <h2>Meet the Team</h2>
     <div class="row" id="creators">
         <div class="bio">
+            <img class="mii" alt="" src="static/images/julia_mii.png">
             <h3>Julia</h3>
             <p>Major: Computer Science</p>
             <p>Class of 2025</p>
             <p>I'm a senior at Furman University double majoring in Computer Science and English. I'm the President of Furman University's Student Chapter of the ACM. I'm also a Lead Peer Learning Consultant for Furman's Peer Assisted Learning Center. I love reading, writing, and hiking (bonus points if I can do it all in one day). </p>
         </div>
         <div class="bio">
+            <img class="mii" alt="" src="static/images/sage_mii.png">
             <h3>Sage</h3>
             <p>Major: Computer Science</p>
             <p>Class of 2025</p>
@@ -72,6 +72,7 @@
                 Park, playing video games, and having her head aggressively stuck in a book 24/7.</p>
         </div>
         <div class="bio">
+            <img class="mii" alt="" src="static/images/hanna_mii.png">
             <h3>Hanna</h3>
             <p>Major: Computer Science</p>
             <p>Class of 2025</p>
@@ -84,6 +85,7 @@
                 and crochet.</p>
         </div>
         <div class="bio">
+            <img class="mii" alt="" src="static/images/miles_mii.png">
             <h3>Miles</h3>
             <p>Major: Computer Science</p>
             <p>Class of 2024</p>
@@ -140,7 +142,6 @@
     }
 
     function changeMode() {
-        console.log("Theme: " + theme);
         if (sessionStorage.getItem('theme') == 'light') {
             changeModeHelper('dark');
             sessionStorage.setItem('theme', 'dark');
