@@ -2,13 +2,13 @@ from flask import Flask, jsonify, json, render_template
 
 app = Flask(__name__)
 
-@app.route("/finFacts")
+@app.route("/facts")
 def facts():
     with open('facts.json') as f:
         fin = json.load(f)
     return jsonify(fin)
 
-@app.route("/anatomy")
+@app.route("/anatomyData")
 def anatomy():
     with open('anatomy.json') as f:
         dolphin_data = json.load(f)

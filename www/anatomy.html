@@ -62,7 +62,7 @@
             async function loadTitleText() {
                 console.log("TITLE TEXT!");
                 // Get the anatomy info as JSON
-                let prom = await fetch("/anatomy");
+                let prom = await fetch("/anatomyData");
                 let anatomy = await prom.json();
                 console.log(anatomy);
                 // Get the anatomical parts

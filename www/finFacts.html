@@ -67,7 +67,7 @@
 
     <script>
         async function getFacts() {
-            let prom = await fetch("/finFacts");
+            let prom = await fetch("/facts");
             let facts = await prom.json();
 
             let div = document.getElementById("fact-field");
