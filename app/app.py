@@ -26,3 +26,4 @@ def create_app(shared_server=False):
 
         info = dolphin_type_data[type]
         return render_template('types.html', info=info, type=type)
+    return app
