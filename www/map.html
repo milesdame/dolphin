@@ -16,6 +16,18 @@
     <!--ours / class content-->
     <link rel="stylesheet" href="static\css\style.css">
     <meta name="viewport" content="width=device-width">
+
+    <!--leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+    </script>
+
 </head>
 
 <body onload="themeSet()">
@@ -48,13 +60,10 @@
         </div>
     </div>
     <div>
+
         <h2>Map</h2>
         <p>Map will display here!</p>
-
-        <div id="voyager">
-        <!-- embed credit to https://smithsonian.github.io/dpo-voyager/explorer/usage/ -->
-        <iframe name="Dolphin Voyager" src="https://www.pacioos.hawaii.edu/voyager/index.html?b=16.349,-170.262386,26.890106,-151.596614&s=1&t=m&o=dolph" width="1000" height="650" allow="xr; xr-spatial-tracking; fullscreen"></iframe>
-        </div>
+        <div id="map"></div>
     </div>
     <footer>
         <p>Thanks to the National Oceanic and Atmospheric Administration and Department of Commerce for <a
@@ -62,6 +71,58 @@
     </footer>
 </body>
 <!-- https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci -->
+<script>
+
+    /* Developed based on Leaflet.js tutorials */
+    var map = L.map('map').setView([21.3069, -157.8583], 10);
+
+    var wmsLayer1 = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
+    layers: 'TOPO-OSM-WMS'
+    }).addTo(map);
+
+    var wmsLayer2 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_bottlenose/ows?', {
+    layers: 'hi_pacioos_all_dolphin_bottlenose',
+    transparent: true,
+    format: 'image/png',
+    }).addTo(map);
+
+    var wmsLayer3 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_frasers/ows?', {
+    layers: 'hi_pacioos_all_dolphin_frasers',
+    transparent: true,
+    format: 'image/png',
+    }).addTo(map);
+
+    var wmsLayer4 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_spotted_pantropical/ows?', {
+    layers: 'hi_pacioos_all_dolphin_spotted_pantropical',
+    transparent: true,
+    format: 'image/png',
+    }).addTo(map);
+
+    var wmsLayer5 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_rissos/ows?', {
+    layers: 'hi_pacioos_all_dolphin_rissos',
+    transparent: true,
+    format: 'image/png',
+    }).addTo(map);
+
+    var wmsLayer6 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_rough_toothed/ows?', {
+    layers: 'hi_pacioos_all_dolphin_rough_toothed',
+    transparent: true,
+    format: 'image/png',
+    }).addTo(map);
+
+    var wmsLayer7 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_spinner/ows?', {
+    layers: 'hi_pacioos_all_dolphin_spinner',
+    transparent: true,
+    format: 'image/png',
+    }).addTo(map);
+
+    var wmsLayer8 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_striped/ows?', {
+    layers: 'hi_pacioos_all_dolphin_striped',
+    transparent: true,
+    format: 'image/png',
+    }).addTo(map);
+
+</script>
 <script>
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".menu");
