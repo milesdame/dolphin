@@ -1,4 +1,5 @@
-from app import app
+from app import create_app
+app = create_app()
 
 #def main(param1, param2):
 #    print("text")
@@ -10,4 +11,4 @@ from app import app
 #    app.run(host='0.0.0.0')
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run()
