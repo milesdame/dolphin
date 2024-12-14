@@ -59,10 +59,10 @@
             </nav>
         </div>
     </div>
-    <div>
+    <div class="page-content">
 
         <h2>Map</h2>
-        <p>Map will display here!</p>
+        <p class="instructions">Use the layer controls on the map to view location data for different species</p>
         <div id="map"></div>
     </div>
     <footer>
@@ -76,51 +76,67 @@
     /* Developed based on Leaflet.js tutorials */
     var map = L.map('map').setView([21.3069, -157.8583], 10);
 
-    var wmsLayer1 = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
+    var wmsMap = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
     layers: 'TOPO-OSM-WMS'
     }).addTo(map);
 
-    var wmsLayer2 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_bottlenose/ows?', {
+    var wmsBottlenose = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_bottlenose/ows?', {
     layers: 'hi_pacioos_all_dolphin_bottlenose',
     transparent: true,
     format: 'image/png',
-    }).addTo(map);
+    });
 
-    var wmsLayer3 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_frasers/ows?', {
+    var wmsFraser = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_frasers/ows?', {
     layers: 'hi_pacioos_all_dolphin_frasers',
     transparent: true,
     format: 'image/png',
-    }).addTo(map);
+    });
 
-    var wmsLayer4 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_spotted_pantropical/ows?', {
+    var wmsSpotted = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_spotted_pantropical/ows?', {
     layers: 'hi_pacioos_all_dolphin_spotted_pantropical',
     transparent: true,
     format: 'image/png',
-    }).addTo(map);
+    });
 
-    var wmsLayer5 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_rissos/ows?', {
+    var wmsRissos = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_rissos/ows?', {
     layers: 'hi_pacioos_all_dolphin_rissos',
     transparent: true,
     format: 'image/png',
-    }).addTo(map);
+    });
 
-    var wmsLayer6 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_rough_toothed/ows?', {
+    var wmsRoughToothed = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_rough_toothed/ows?', {
     layers: 'hi_pacioos_all_dolphin_rough_toothed',
     transparent: true,
     format: 'image/png',
-    }).addTo(map);
+    });
 
-    var wmsLayer7 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_spinner/ows?', {
+    var wmsSpinner = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_spinner/ows?', {
     layers: 'hi_pacioos_all_dolphin_spinner',
     transparent: true,
     format: 'image/png',
-    }).addTo(map);
+    });
 
-    var wmsLayer8 = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_striped/ows?', {
+    var wmsStriped = L.tileLayer.wms('https://geo.pacioos.hawaii.edu/geoserver/PACIOOS/hi_pacioos_all_dolphin_striped/ows?', {
     layers: 'hi_pacioos_all_dolphin_striped',
     transparent: true,
     format: 'image/png',
-    }).addTo(map);
+    });
+
+    var baseMaps = {
+    "World Map": wmsMap
+    };
+
+    var overlayMaps = {
+        "Bottlenose": wmsBottlenose,
+        "Fraser": wmsFraser,
+        "Spotted": wmsSpotted,
+        "Rissos": wmsRissos,
+        "Rough Toothed": wmsRoughToothed,
+        "Spinner": wmsSpinner,
+        "Striped": wmsStriped
+    };
+
+    var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
 
 </script>
 <script>
