@@ -14,14 +14,14 @@
         rel="stylesheet">
 
     <!--ours / class content-->
-    <link rel="stylesheet" href="static\css\style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <meta name="viewport" content="width=device-width">
 </head>
 
 <body onload="themeSet()">
     <div class="head">
         <div class="row">
-            <a href="#"><img id="logo" src="static\images\dolphin-logo-transparent.png"></a>
+            <a href="#"><img id="logo" src="static/images/dolphin-logo-transparent.png"></a>
             <h1>flipper finder</h1>
             <!-- Rounded switch - W3 Schools Toggle-->
             <label class="switch">
@@ -74,6 +74,7 @@
 
     <section onload="loadTitleText()" id="anatomy">
         <svg
+    id="tooltip-svg"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:cc="http://creativecommons.org/ns#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -1944,7 +1945,8 @@
         </g>
         <g
         onclick="getFact('blowhole')"
-        id="blowhole">
+        id="blowhole"
+        class="tooltip-trigger">
         <title class="blowhole"></title>
         <path
         d="M -455.11612,618.7542 
@@ -2511,6 +2513,8 @@
         M -502.22135,813.36639 
         c -20.2409,-1.57242 -28.20976,-49.33214 -25.2468,-59.82928 13.80636,-48.9133 83.53963,-77.72985 96.9157,-67.20726 12.08957,9.5105 25.0425,68.50197 -5.7662,98.36656 z"
         id="Melon"
+        data-tooltip-text="The rounded, fatty organ located on the dolphin's forehead, used for echolocation."
+        class="tooltip-trigger"
         inkscape:connector-curvature="0"
         sodipodi:nodetypes="csscc" />
     </g>
@@ -3627,7 +3631,46 @@
             id="tspan4796"
             sodipodi:role="line">Urogenital slit</tspan></text>
         </switch>
+        
     </g>
+    
+    <g id="tooltip" visibility="hidden" >
+		<rect x="2" y="2" width="80" height="24" fill="black" opacity="0.4" rx="2" ry="2"/>
+		<rect width="80" height="24" fill="white" rx="2" ry="2"/>
+		<text x="4" y="14">Tooltip</text>
+	</g>
+    <script type="text/ecmascript"><![CDATA[
+		(function() {
+			var svg = document.getElementById('tooltip-svg');
+			var tooltip = svg.getElementById('tooltip');
+			var tooltipText = tooltip.getElementsByTagName('text')[0];
+			var tooltipRects = tooltip.getElementsByTagName('rect');
+			var triggers = svg.getElementsByClassName('tooltip-trigger');
+
+			for (var i = 0; i < triggers.length; i++) {
+				triggers[i].addEventListener('mousemove', showTooltip);
+				triggers[i].addEventListener('mouseout', hideTooltip);
+			}
+
+			function showTooltip(evt) {
+				var CTM = svg.getScreenCTM();
+				var x = (evt.clientX - CTM.e + 6) / CTM.a;
+				var y = (evt.clientY - CTM.f + 20) / CTM.d;
+				tooltip.setAttributeNS(null, "transform", "translate(" + x + " " + y + ")");
+				tooltip.setAttributeNS(null, "visibility", "visible");
+
+				tooltipText.firstChild.data = evt.target.getAttributeNS(null, "data-tooltip-text");
+				var length = tooltipText.getComputedTextLength();
+				for (var i = 0; i < tooltipRects.length; i++) {
+					tooltipRects[i].setAttributeNS(null, "width", length + 8);
+				}
+			}
+
+			function hideTooltip(evt) {
+				tooltip.setAttributeNS(null, "visibility", "hidden");
+			}
+		})()
+    ]]></script>
             </svg>
     </section>
     <script src="https://d3js.org/d3.v6.min.js"></script>

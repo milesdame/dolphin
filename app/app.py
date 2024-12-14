@@ -7,23 +7,23 @@ def create_app(shared_server=False):
     if app.config['SHARED_SERVER']:
         prepend = '/dolphin'
 
-    @app.route("/facts")
+    @app.route(prepend + "/facts")
     def facts():
         with open('facts.json') as f:
             fin = json.load(f)
         return jsonify(fin)
 
-    @app.route("/anatomyData")
+    @app.route(prepend + "/anatomyData")
     def anatomy():
         with open('anatomy.json') as f:
             dolphin_data = json.load(f)
         return jsonify(dolphin_data)
 
-    @app.route("/types/<type>")
+    @app.route(prepend + "/types/<type>")
     def make_type_page(type):
         with open('types.json') as f:
             dolphin_type_data = json.load(f)
 
         info = dolphin_type_data[type]
-        return render_template('types.html', info=info, type=type)
+        return render_template('types.html', info=info, type=type, prepend=prepend)
     return app
