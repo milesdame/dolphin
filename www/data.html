@@ -2,9 +2,7 @@
 <html lang="en-US">
 
 <head>
-    <title>
-        {% block title %}{% endblock %}
-    </title>
+    <title>flipper finder</title>
     <link rel="icon" type="image/x-icon" href="static/images/dolphin_favicon.png">
 
     <!-- Fonts from Google -->
@@ -15,27 +13,26 @@
         rel="stylesheet">
 
     <!--ours / class content-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="static/css/style.css">
     <meta name="viewport" content="width=device-width">
 </head>
 
 <body onload="themeSet()">
     <div class="head">
         <div class="row">
-            <a href="#"><img id="logo" src="{{ url_for('static', filename='images/dolphin-logo-transparent.png') }}"></a>
+            <a href="#"><img id="logo" src="static/images/dolphin-logo-transparent.png"></a>
             <h1>flipper finder</h1>
-
             <a><img id="modeTheme" onclick="changeMode()" src=""></a>
         </div>
         <div class="row color">
             <nav>
                 <div class="menu">
-                    <a href="/index.html">home</a>
-                    <a href="/about.html">about</a>
-                    <a href="/species.html">species</a>
-                    <a href="/finFacts.html">facts</a>
-                    <a href="/map.html">map</a>
-                    <a href="/anatomy.html">anatomy</a>
+                    <a href="index.html">home</a>
+                    <a href="about.html">about</a>
+                    <a href="species.html">species</a>
+                    <a href="finFacts.html">facts</a>
+                    <a href="map.html">map</a>
+                    <a href="anatomy.html">anatomy</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -45,14 +42,38 @@
             </nav>
         </div>
     </div>
-
-
-    {% block content %} {% endblock %}
-
+    <div>
+        <h2>Data Sources</h2>
+        The following sources provided the data and information found on this webpage.
+        <ul>
+            <li>Home page introductory information from <a href = "https://en.wikipedia.org/wiki/Dolphin">Wikipedia</a></li>
+            <li>Home page video from <a href="https://sanctuaries.noaa.gov/">NOAA</a></li>
+            <li>Miis created with Nintendo's <a href = "https://accounts.nintendo.com/mii_studio">Mii Studio</a></li>
+            <li>Dolphin species data from <a href="https://www.fisheries.noaa.gov/dolphins-porpoises#by-species">NOAA Fisheries</a></li>
+            <li>
+                <ul>
+                    <li><a href="https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin">Bottlenose</a></li>
+                    <li><a href="https://www.fisheries.noaa.gov/species/frasers-dolphin">Fraser's</a></li>
+                    <li><a href="https://www.fisheries.noaa.gov/species/pantropical-spotted-dolphin">Pantropical Spotted</a></li>
+                    <li><a href="https://www.fisheries.noaa.gov/species/rissos-dolphin">Risso's</a></li>
+                    <li><a href="https://www.fisheries.noaa.gov/species/rough-toothed-dolphin">Rough-toothed</a></li>
+                    <li><a href="https://www.fisheries.noaa.gov/species/spinner-dolphin">Spinner</a></li>
+                    <li><a href="https://www.fisheries.noaa.gov/species/striped-dolphin">Striped</a></li>
+                </ul>
+            </li>
+            <li>Fun facts gleaned from <a href="https://us.whales.org/whales-dolphins/facts-about-dolphins/">Whale and Dolphin Conservation USA</a>, 
+                <a href="https://marcoislanddolphintour.com/dolphin-facts/">Marco Island Dolphin Tours</a> and 
+                <a href="https://www.dolphinsplus.com/dolphin-facts-everything-you-need-to-know">Dolphins Plus</a>.</li>
+            <li>Map data courtesy of NOAA's <a href="https://catalog.data.gov/dataset/species-distribution-bottlenose-dolphin-hawaii">Pacific Islands Ocean Observing System</a></li>
+            <li>Dolphin anatomy information from <a href="https://www.wilddolphinproject.org/discovering-dolphin-anatomy-dolphins-unique-adapations/">The Wild Dolphin Project</a>" 
+                and <a href="https://www.dolphins-world.com/dolphin-anatomy/">Dolphin's World</a>.</li>
+            <li>Dolphin anatomy SVG from <a href="https://commons.wikimedia.org/wiki/File:Dolphin_Anatomy.svg">Wikimedia</a></li>
+            <li>Favicon courtesy of <a href="https://openmoji.org/library/emoji-1F42C/">Openmoji</a></li>
+        </ul>
+    </div>>
 
     <footer>
-        <p><a
-                href="data.html">data</a>.</p>
+        <p>See data <a href="data.html">sources</a>.</p>
     </footer>
 </body>
 <!-- https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci -->
@@ -81,36 +102,35 @@
         if (sessionStorage.getItem('theme') == null) {
             sessionStorage.setItem('theme', 'light');
             let img = document.getElementById("modeTheme");
-            img.setAttribute('src','/static/images/light_mode.png')
+            img.setAttribute('src','static/images/light_mode.png')
         } 
 
         if (sessionStorage.getItem('theme') == 'dark') {
             changeModeHelper('dark');
             let img = document.getElementById("modeTheme");
-            img.setAttribute('src','/static/images/dark_mode.png')
+            img.setAttribute('src','static/images/dark_mode.png')
         }
 
         if (sessionStorage.getItem('theme') == 'light') {
             changeModeHelper('light');
             let img = document.getElementById("modeTheme");
-            img.setAttribute('src','/static/images/light_mode.png')
+            img.setAttribute('src','static/images/light_mode.png')
         }
 
-            
+        
     }
 
     function changeMode() {
         if (sessionStorage.getItem('theme') == 'light') {
             changeModeHelper('dark');
             let img = document.getElementById("modeTheme");
-            img.setAttribute('src', '/static/images/dark_mode.png')
-            
+            img.setAttribute('src','static/images/dark_mode.png')
             sessionStorage.setItem('theme', 'dark');
         } else {
             changeModeHelper('light')
             sessionStorage.setItem('theme', 'light');
             let img = document.getElementById("modeTheme");
-            img.setAttribute('src', '/static/images/light_mode.png')
+            img.setAttribute('src','static/images/light_mode.png')
         }
     }
 
