@@ -58,8 +58,9 @@
                 console.log("TITLE TEXT YES!");
                 // Get the anatomy info as JSON
                 let prom = await fetch("/anatomyData");
-                let anatomy = await prom.json();
                 console.log("HERE");
+                let anatomy = await prom.json();
+                console.log("NEXT");
                 // Get the anatomical parts
                 let keys = Object.keys(anatomy["Dolphin_Anatomy"]);
                 console.log(keys);
@@ -72,7 +73,7 @@
             }
         </script>
 
-    <section onload="loadTitleText()" id="anatomy">
+    <section id="anatomy">
         <svg
     id="tooltip-svg"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -3673,6 +3674,7 @@
     ]]></script>
             </svg>
     </section>
+    <p>Image Source:<a href="https://commons.wikimedia.org/wiki/File:Dolphin_Anatomy.svg">Wikimedia Dolphin Anatomy</a> Edited to remove uneeded labels and parts</p>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script>
         loadTitleText()
