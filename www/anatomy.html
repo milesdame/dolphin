@@ -2,9 +2,8 @@
 <html lang="en-US">
 
 <head>
-    <title>
-        flipper finder 2.0
-    </title>
+    <title>flipper finder</title>
+    <link rel="icon" type="image/x-icon" href="static/images/dolphin_favicon.png">
 
     <!-- Fonts from Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +27,7 @@
                 <input type="checkbox" onchange="changeMode()">
                 <span class="slider round"></span>
             </label>
+            <a><img id="modeTheme" onclick="changeMode()" src=""></a>
         </div>
         <div class="row color">
             <nav>
@@ -55,11 +55,11 @@
     </div>
         <script>
             async function loadTitleText() {
-                console.log("TITLE TEXT!");
+                console.log("TITLE TEXT YES!");
                 // Get the anatomy info as JSON
                 let prom = await fetch("/anatomyData");
                 let anatomy = await prom.json();
-                console.log(anatomy);
+                console.log("HERE");
                 // Get the anatomical parts
                 let keys = Object.keys(anatomy["Dolphin_Anatomy"]);
                 console.log(keys);
@@ -3736,26 +3736,36 @@
     function themeSet(){
         if (sessionStorage.getItem('theme') == null) {
             sessionStorage.setItem('theme', 'light');
+            let img = document.getElementById("modeTheme");
+            img.setAttribute('src','static/images/light_mode.png')
         } 
 
         if (sessionStorage.getItem('theme') == 'dark') {
             changeModeHelper('dark');
+            let img = document.getElementById("modeTheme");
+            img.setAttribute('src','static/images/dark_mode.png')
         }
 
         if (sessionStorage.getItem('theme') == 'light') {
             changeModeHelper('light');
+            let img = document.getElementById("modeTheme");
+            img.setAttribute('src','static/images/light_mode.png')
         }
 
-        
+            
     }
 
     function changeMode() {
         if (sessionStorage.getItem('theme') == 'light') {
             changeModeHelper('dark');
+            let img = document.getElementById("modeTheme");
+            img.setAttribute('src','static/images/dark_mode.png')
             sessionStorage.setItem('theme', 'dark');
         } else {
             changeModeHelper('light')
             sessionStorage.setItem('theme', 'light');
+            let img = document.getElementById("modeTheme");
+            img.setAttribute('src','static/images/light_mode.png')
         }
     }
 
