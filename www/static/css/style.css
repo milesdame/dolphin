@@ -451,3 +451,12 @@ video {
   display: flex;
   flex-direction: column;
 }
+
+#modeTheme {
+  height: 10vh;
+}
+
+#modeBtn {
+  all: unset;
+  cursor: pointer;
+}
