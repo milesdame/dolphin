@@ -22,7 +22,7 @@
         <div class="row">
             <a href="#"><img id="logo" src="static/images/dolphin-logo-transparent.png"></a>
             <h1>flipper finder</h1>
-            <a><img id="modeTheme" onclick="changeMode()" src=""></a>
+            <button id="modeBtn" onclick="changeMode()"><img id="modeTheme"  src=""></button>
         </div>
         <div class="row color">
             <nav>
@@ -42,11 +42,10 @@
             </nav>
         </div>
     </div>
-    <div id="anatomy-container">
+    <div class="page-content" id="anatomy-container">
         <h2>Anatomy of a Dolphin (Delphinidae)</h2>
-        <h3 id="body-part">Anatomy</h3>
-        <p id="anatomy-fact"></p>
-        <p>Tap or hover over a body part to learn more about it! Scroll or pinch to zoom in and drag to pan</p>
+        <p class="instructions">Tap or hover over certain body part to learn more about them! Scroll or pinch to zoom in and drag to pan</p>
+        <p class="instructions">Not all body parts have additional information.</p>
     </div>
         <script>
             async function loadTitleText() {
@@ -62,7 +61,9 @@
                 // Loop through each part and add it's info to the correct <title> element
                 for (let i = 0; i < keys.length; i++) {
                     let titles = document.getElementsByClassName(keys[i]);
+                    
                     let title = titles[0];
+                    
                     title.innerHTML = anatomy["Dolphin_Anatomy"][keys[i]];
                 }
             }
@@ -2266,7 +2267,7 @@
         <g
         onclick="getFact('spinal column')"
         transform="translate(594.92409,1811.6326)"
-        id="spinal-column">
+        id="spinal column">
         <title class="spinal column"></title>
         <path
             style="fill:#ffedb6;fill-opacity:1;stroke:#906c00;stroke-width:1.19735944px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2279,6 +2280,7 @@
         onclick="getFact('heart')"
         style="opacity:1"
         transform="translate(-306.94681,902.90647)"
+        class="tooltip-trigger"
         id="heart">
         <title class="heart"></title>
         <path
@@ -2508,8 +2510,7 @@
         z
         M -502.22135,813.36639 
         c -20.2409,-1.57242 -28.20976,-49.33214 -25.2468,-59.82928 13.80636,-48.9133 83.53963,-77.72985 96.9157,-67.20726 12.08957,9.5105 25.0425,68.50197 -5.7662,98.36656 z"
-        id="Melon"
-        data-tooltip-text="The rounded, fatty organ located on the dolphin's forehead, used for echolocation."
+        id="melon"
         class="tooltip-trigger"
         inkscape:connector-curvature="0"
         sodipodi:nodetypes="csscc" />
@@ -3669,7 +3670,6 @@
     ]]></script>
             </svg>
     </section>
-    <p>Image Source:<a href="https://commons.wikimedia.org/wiki/File:Dolphin_Anatomy.svg">Wikimedia Dolphin Anatomy</a> Edited to remove uneeded labels and parts</p>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script>
         loadTitleText()
