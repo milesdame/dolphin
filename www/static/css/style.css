@@ -454,6 +454,12 @@ video {
 
 #modeTheme {
   height: 10vh;
+  padding: 4px;
+}
+
+#modeTheme:hover {
+  background-color: #9FC9D1;
+  border-radius: 5px;
 }
 
 #modeBtn {
