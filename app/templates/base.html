@@ -5,7 +5,7 @@
     <title>
         {% block title %}{% endblock %}
     </title>
-    <link rel="icon" type="image/x-icon" href="static/images/dolphin_favicon.png">
+    <link rel="icon" type="image/x-icon" href="../static/images/dolphin_favicon.png">
 
     <!-- Fonts from Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,14 +15,14 @@
         rel="stylesheet">
 
     <!--ours / class content-->
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <meta name="viewport" content="width=device-width">
 </head>
 
 <body onload="themeSet()">
     <div class="head">
         <div class="row">
-            <a href="#"><img id="logo" src="static/images/dolphin-logo-transparent.png"></a>
+            <a href="#"><img id="logo" src="../static/images/dolphin-logo-transparent.png"></a>
             <h1>flipper finder</h1>
 
             <button id="modeBtn" onclick="changeMode()"><img id="modeTheme"  src=""></button>
@@ -81,19 +81,19 @@
         if (sessionStorage.getItem('theme') == null) {
             sessionStorage.setItem('theme', 'light');
             let img = document.getElementById("modeTheme");
-            img.setAttribute('src','/static/images/light_mode.png')
+            img.setAttribute('src','../static/images/light_mode.png')
         } 
 
         if (sessionStorage.getItem('theme') == 'dark') {
             changeModeHelper('dark');
             let img = document.getElementById("modeTheme");
-            img.setAttribute('src','/static/images/dark_mode.png')
+            img.setAttribute('src','../static/images/dark_mode.png')
         }
 
         if (sessionStorage.getItem('theme') == 'light') {
             changeModeHelper('light');
             let img = document.getElementById("modeTheme");
-            img.setAttribute('src','/static/images/light_mode.png')
+            img.setAttribute('src','../static/images/light_mode.png')
         }
 
             
