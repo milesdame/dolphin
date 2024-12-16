@@ -7,7 +7,7 @@
 <h2>{{ info[common_name] }}</h2>
 <div class="types-structure">
     <img id="type-img" src="{{ url_for('static', filename='images/'+ type +'.png') }}">
-    <img id="type-img" src="{{ '../static' + filename='images/'+ type +'.png' }}">
+    <img id="type-img" src="{{ '../static/images/' + type + '.png' }}">
     <div class="type-facts">
         <p><b>Common Name: </b>{{ info["common_name"] }}</p>
         <p><b>Scientific Name: </b><i>{{ info["sci_name"] }}</i></p>
