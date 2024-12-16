@@ -436,3 +436,12 @@ video {
     transform: translateX(-50%);
   }
 }
+
+.types-structure {
+  display: flex;
+}
+
+.type-facts {
+  display: flex;
+  flex-direction: column;
+}

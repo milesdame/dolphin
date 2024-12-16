@@ -5,17 +5,19 @@
 {% block content %}
 
 <h2>{{ info[common_name] }}</h2>
+<div class="types-structure">
+    <img src="{{ url_for('static', filename='images/'+ type +'.png') }}">
+    <div class="type-facts">
+        <p><b>Common Name: </b>{{ info["common_name"] }}</p>
+        <p><b>Scientific Name: </b><i>{{ info["sci_name"] }}</i></p>
+        <p><b>Length: </b>{{ info["length"] }} m</p>
+        <p><b>Adult Weight: </b> {{ info["weight"] }} kg</p>
+        <p><b>Life Span: </b>{{ info["life_span"] }} years</p>
+        <p><b>Description: </b>{{ info["desc"] }}</p>
+        <p><b>Fin Fact: </b>{{ info["fact"] }}</p>
+    </div>
 
-<img src="{{ url_for('static', filename='images/'+ type +'.png') }}">
-
-<p><b>Common Name: </b>{{ info["common_name"] }}</p>
-<p><b>Scientific Name: </b><i>{{ info["sci_name"] }}</i></p>
-<p><b>Length: </b>{{ info["length"] }} m</p>
-<p><b>Adult Weight: </b> {{ info["weight"] }} kg</p>
-<p><b>Life Span: </b>{{ info["life_span"] }} years</p>
-<p><b>Description: </b>{{ info["desc"] }}</p>
-<p><b>Fin Fact:</b>{{ info["fact"] }}</p>
-
+</div>
 
 <p>Information from <a href="https://www.fisheries.noaa.gov/dolphins-porpoises#by-species">NOAA</a></p>
 
